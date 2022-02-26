@@ -1,0 +1,103 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%
+    ), url("https://prospected.com/wp-content/uploads/2019/07/15-Best-Video-Streaming-Scripts-Templates.jpg");
+    background-size: cover;
+    // position: relative;
+    .top{
+        .wrapper{
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                height:100px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .loginButton{
+                text-decoration: none;
+                background-color: red;
+                border: none;
+                color: white;
+                border-radius: 5px;
+                padding: 5px 15px;
+                cursor: pointer;
+                font-size: 14px;
+            }  
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        top: 0;
+        left: 0;
+       
+        h1{
+            font-size: 50px;
+            @media screen and (max-width: 800px){
+                font-size: 30px;
+                text-align: center;
+              }
+        }
+        h2{
+            margin: 20px 0px ;
+            @media screen and (max-width: 800px){
+                font-size: 20px;
+                text-align: center;
+              }
+        }
+
+        p{
+            margin: 10px 10px;
+            font-size: 20px;
+            @media screen and (max-width: 800px){
+                font-size: 15px;
+                text-align: center;
+              }
+        }
+
+        .input{
+           width: 50%;
+           background-color: white;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           margin-top: 20px;
+           height: 50px;
+           border-radius: 5px;
+
+            input{
+                border: none;
+                height: 100%;
+                flex: 9;
+                padding: 0px 10px;
+            }
+            .registerButton{
+                flex: 3;
+                height: 100%;
+                background-color: red;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+                @media screen and (max-width: 800px){
+                    font-size: 13px;
+                    text-align: center;
+                  }
+            }
+        }
+    }
+}
