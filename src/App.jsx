@@ -13,13 +13,13 @@ const App = () => {
   return (
     <Router>
         <Switch>
-      <Route exact path="/"component={() => user?(<Home />):(<Redirect to="/register" />)} />
       <Route exact path="/movies"component={() => user?(<Home type="movies" />):(<Redirect to="/register" />)} />
       <Route exact path="/series"component={() => user?(<Home type="series" />):(<Redirect to="/register" />)} />
       <Route exact path="/watch/:id"component={() => user?(<Watch />):(<Redirect to="/register" />)} />
       <Route exact path="/watch-app/:id/:token"component={() => <WatchApp />} />
       <Route exact path="/register"component={() => !user?(<Register />):(<Redirect to="/" />)} />
       <Route exact path="/login"component={() => !user?(<Login />):(<Redirect to="/" />)} />
+      <Route exact path="/"component={() => user?(<Home />):(<Redirect to="/register" />)} />
     </Switch>
 
   </Router>

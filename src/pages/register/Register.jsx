@@ -36,10 +36,12 @@ function Register() {
     }
     return (
         <div className="register">
+            
             <div className="top">
+           
                 <div className="wrapper">
                 <img src="/img/tubeflix.svg" alt="" className="logo" />
-            <Link to="/login" className="loginButton">Sign In</Link>
+            
             </div>
         </div>
             <div className="container">
@@ -48,10 +50,12 @@ function Register() {
                 <p>
                   Ready to watch? Enter your email to create or restart a membership
                 </p>
+                
                 {index==0&&
                      <div className="input">
                      <input name="email" onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="Enter email address" />
                      <button type="submit" className="registerButton" onClick={handleStart}>Get Started</button>
+                   
                  </div>
                 }
                 {index==1&&
@@ -66,7 +70,9 @@ function Register() {
                     <button type="submit" disabled={isFetching} className="registerButton" onClick={handleFinish}>{isFetching&&<>a moment...</>}{!isFetching&&<>Start</>}</button>
                 </div>
               }
+              <Link to="/login" className="loginButton">Already have an account?</Link>
             </div>
+            
         </div>
     )
 }

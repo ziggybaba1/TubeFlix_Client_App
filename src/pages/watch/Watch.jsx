@@ -29,7 +29,7 @@ function Watch() {
         try {
             setMovie(movied);
             setLoading(true)
-            let res=await axios.get("/movies/find/"+id,{
+            let res=await axios.get("api/movies/find/"+id,{
                 headers: {
                     Authorization: `Bearer ${user?.accessToken}`
                  }

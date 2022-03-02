@@ -13,7 +13,7 @@ function ListItem({index,item}) {
     useEffect(() => {
        const getMovie = async () =>{
            try {
-               const res = await axios.get("/movies/find/"+ item,{
+               const res = await axios.get("api/movies/find/"+ item,{
                 headers: {
                     Authorization: `Bearer ${user?.accessToken}`
                  }

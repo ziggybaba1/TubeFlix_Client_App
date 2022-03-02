@@ -28,6 +28,6 @@ export const registerFailure = () => ({
 
 
 //Logout Action
-export const logout = () => ({
+export const logoutStart = () => ({
     type: "LOGOUT",
 });

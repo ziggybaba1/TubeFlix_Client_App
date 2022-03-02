@@ -14,8 +14,7 @@
             align-items: center;
             justify-content: space-between;
             .logo{
-                height:40px;
-                width: 10%;
+                height:100px;
                 border-radius: 5px;
                 object-fit: cover;
                 cursor: pointer;
@@ -48,32 +47,38 @@
         form{
             width: 300px;
             height: 300px;
-            padding: 30px;
+            padding: 20px;
             border-radius: 5px;
             background-color: var(--main-color);
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-
+            align-items: center;
             input{
                 height: 40px;
+                width: 300px;
                 border-radius: 5px;
-                background-color: rgb(204, 196, 196);
-                color: white;
+                background-color: rgb(255, 255, 255);
+                color: black;
                 padding-left: 10px;
 
-                &::placeholder{
-                    color: lightgray;
-                }
+                // &::placeholder{
+                //     color: lightgray;
+                // }
             }
             button{
-                height: 40px;
+                padding: 10px 20px 10px 20px;
                 border-radius: 5px;
                 background-color: red;
                 color: white;
                 border: none;
                 cursor: pointer;
-                font-size: 18px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+            a{
+                text-decoration: none;
+                color: white;
                 font-weight: 500;
             }
             span{
@@ -84,7 +89,7 @@
             }
             small{
                 color: lightgray;
-                 
+                 text-align: center;
                 b{
                     color: white;
                 }
