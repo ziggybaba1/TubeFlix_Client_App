@@ -1,26 +1,28 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./listItem.scss";
 import {PlayArrow, Add, ThumbDownOutlined, ThumbUpAltOutlined} from "@mui/icons-material";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactPlayer from 'react-player'
+import { AuthContext } from "../../context/authContext/AuthContext";
 
 function ListItem({index,item}) {
     const [isHovered, setIsHovered] = useState(false);
     const [movie,setMovie]=useState({});
+    const {user} = useContext(AuthContext);
     useEffect(() => {
        const getMovie = async () =>{
            try {
                const res = await axios.get("/movies/find/"+ item,{
                 headers: {
-                    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjliOGY3NzVmODQ4MGNiYWVjOGI1ZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzOTU4ODY1OSwiZXhwIjoxNjQwMDIwNjU5fQ.pdc0sCEPunVmAh-WS917xnsHqj_mJoEedU6P7yM_W8Y"
+                    Authorization: `Bearer ${user?.accessToken}`
                  }
                 });
                 if(res.data){
                     setMovie(res.data);
                 }
            } catch (err) {
-            console.log(err.message)
+            // console.log(err.message)
            }
        }
        getMovie();

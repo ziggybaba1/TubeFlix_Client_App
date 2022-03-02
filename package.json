@@ -47,5 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:3003/api/"
+  "proxy": "https://tubeflix-server.herokuapp.com/api/"
 }

@@ -23,7 +23,11 @@ function WatchApp() {
 
     const getVideos=async()=>{
         setMovie(movied);
-        let res=await axios.get("/movies/find/"+id+"/"+token);
+        let res=await axios.get("/movies/find/"+id,{
+          headers: {
+              Authorization: `Bearer ${token}`
+           }
+          });
         setMovie(res.data);
     }
    

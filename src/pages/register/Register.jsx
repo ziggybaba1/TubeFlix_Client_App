@@ -29,7 +29,7 @@ function Register() {
             "password": password
           };
         register(data,dispatch); 
-        console.log(index);
+        // console.log(index);
        } catch (error) {
            
        }
@@ -46,7 +46,7 @@ function Register() {
                 <h1>Unlimited movies, TV shows, and more.</h1>
                 <h2>Watch anywhere. Cancel anytime</h2>
                 <p>
-                  {index}  Ready to watch? Enter your email to create or restart a membership
+                  Ready to watch? Enter your email to create or restart a membership
                 </p>
                 {index==0&&
                      <div className="input">

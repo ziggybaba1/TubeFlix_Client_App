@@ -1,18 +1,20 @@
 import "./Featured.scss";
 import {PlayArrow,InfoOutlined} from "@mui/icons-material";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext/AuthContext";
 
 function Featured({type}) {
     const [content, setContent] = useState({});
+    const {user} = useContext(AuthContext);
 
     useEffect(()=>{
 const getRandomContent= async ()=>{
  try {
      const res = await axios.get(`/movies/random?type=${type}`,{
         headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjliOGY3NzVmODQ4MGNiYWVjOGI1ZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzOTU4ODY1OSwiZXhwIjoxNjQwMDIwNjU5fQ.pdc0sCEPunVmAh-WS917xnsHqj_mJoEedU6P7yM_W8Y"
+            Authorization: `Bearer ${user?.accessToken}`
          }
         });
      setContent(res.data[0]);
